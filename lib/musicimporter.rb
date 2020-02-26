@@ -5,8 +5,9 @@ class MusicImporter
     @path = path
   end
   
-  def self.import()
-    
+  def import()
+    self.files.each do |file|
+      Song.crea
   end
   
   def files()
