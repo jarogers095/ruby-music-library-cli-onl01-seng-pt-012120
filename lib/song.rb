@@ -42,7 +42,7 @@ class Song
     split_filename = filename.split(" - ")
     song_artist = Artist.find_or_create_by_name(split_filename[0])
     song_name = split_filename[1]
-    song_genre = Genre.find_or_create_by_name(split_filename[2])
+    song_genre = Genre.find_or_create_by_name(split_filename[2].split(".")[0])
     new_song = Song.new(song_name, song_artist, song_genre)
     
     return new_song
