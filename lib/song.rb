@@ -40,7 +40,7 @@ class Song
   
   def self.new_from_filename(filename)
     split_filename = filename.split(" - ")
-    artist_name = split_filename[0]
+    new_artist = split_filename[0]
     song_name = split_filename[1]
     genre_name = split_filename[2]
     new_song = Song.new(song_name, artist_name, genre_name)
